@@ -1,5 +1,5 @@
 export const APP_NAME = 'Summit';
-export const APP_TAGLINE = 'Start in debt. Climb to victory.';
+export const APP_TAGLINE = 'Start in debt. Reach your summit.';
 export const APP_DESCRIPTION = 'The habit tracker that flips the script. Wake up in the red, complete your habits, and watch your score transform from negative to positive. Every day is a climb to your summit.';
 export const APP_STORE_URL = 'https://apps.apple.com/us/app/summit-habit-tracker/id6751303035';
 
@@ -124,13 +124,14 @@ export const PRICING = {
       period: '/month',
     },
     annual: {
-      price: '$29.99',
+      price: '$39.99',
       period: '/year',
-      savings: 'Save 50%',
+      savings: 'Save 33%',
     },
     lifetime: {
       price: '$79.99',
       period: 'one-time',
+      savings: 'Best Value',
     },
     description: 'For those serious about growth',
     features: [

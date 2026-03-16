@@ -25,8 +25,8 @@ export function DeviceMockup({ children, className, floating = true, screenshotS
       animate={floating ? { y: [0, -10, 0] } : undefined}
       transition={floating ? floatingTransition : undefined}
     >
-      {/* iPhone Frame */}
-      <div className="relative w-[280px] h-[560px] sm:w-[300px] sm:h-[600px] md:w-[320px] md:h-[640px]">
+      {/* iPhone Frame - 6.5 inch iPhone (19.5:9 aspect ratio) */}
+      <div className="relative w-[280px] h-[608px] sm:w-[300px] sm:h-[652px] md:w-[320px] md:h-[696px]">
         {/* Outer frame */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#2C2C2E] to-[#1C1C1E] rounded-[45px] p-[3px] shadow-2xl">
           {/* Inner bezel */}

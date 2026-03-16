@@ -1,0 +1,49 @@
+'use client';
+
+import { Container } from '@/components/ui/Container';
+import { FadeIn } from '@/components/animations/FadeIn';
+import { HOW_IT_WORKS } from '@/lib/constants';
+
+export function HowItWorks() {
+  return (
+    <section id="how-it-works" className="py-20 md:py-32 bg-gradient-to-b from-[#0C0C0E] to-black">
+      <Container>
+        <FadeIn className="text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+            How it <span className="text-[#00D47B]">works</span>
+          </h2>
+          <p className="text-lg text-[#8E8E93] max-w-2xl mx-auto">
+            Getting started with Summit is simple. Build better habits in three easy steps.
+          </p>
+        </FadeIn>
+
+        <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+          {HOW_IT_WORKS.map((item, index) => (
+            <FadeIn key={item.step} delay={index * 0.15}>
+              <div className="relative">
+                {/* Connector line */}
+                {index < HOW_IT_WORKS.length - 1 && (
+                  <div className="hidden md:block absolute top-8 left-[calc(50%+40px)] w-[calc(100%-80px)] h-[2px] bg-gradient-to-r from-[#00D47B]/50 to-[#00D47B]/10" />
+                )}
+
+                <div className="text-center">
+                  {/* Step number */}
+                  <div className="w-16 h-16 rounded-full bg-[#00D47B] text-black text-2xl font-bold flex items-center justify-center mx-auto mb-6">
+                    {item.step}
+                  </div>
+
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    {item.title}
+                  </h3>
+                  <p className="text-[#8E8E93] leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+      </Container>
+    </section>
+  );
+}

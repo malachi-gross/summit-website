@@ -1,7 +1,7 @@
 export const APP_NAME = 'Summit';
 export const APP_TAGLINE = 'Climb higher every day.';
 export const APP_DESCRIPTION = 'The habit tracking app that helps you build lasting routines through streaks, insights, and beautiful design.';
-export const APP_STORE_URL = '#'; // Replace with actual App Store URL
+export const APP_STORE_URL = 'https://apps.apple.com/us/app/summit-habit-tracker/id6751303035';
 
 export const FEATURES = [
   {

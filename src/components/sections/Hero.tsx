@@ -61,7 +61,7 @@ export function Hero() {
                   ))}
                 </div>
                 <span className="text-[#8E8E93] text-sm">
-                  4.9 rating on App Store
+                  5.0 rating on App Store
                 </span>
               </div>
             </FadeIn>

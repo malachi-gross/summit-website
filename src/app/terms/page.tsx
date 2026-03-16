@@ -44,7 +44,7 @@ export default function TermsPage() {
           <section className="mb-8">
             <h2 className="text-xl font-semibold text-white mb-4">4. Subscription and Payments</h2>
             <p className="text-[#8E8E93] leading-relaxed mb-4">
-              Summit offers both free and premium subscription options. Premium subscriptions are billed through
+              Summit offers both free and pro subscription options. Pro subscriptions are billed through
               the App Store. All purchases are subject to the App Store&apos;s terms and conditions. Subscriptions
               automatically renew unless cancelled at least 24 hours before the end of the current period.
             </p>
@@ -96,7 +96,7 @@ export default function TermsPage() {
           <section className="mb-8">
             <h2 className="text-xl font-semibold text-white mb-4">10. Contact</h2>
             <p className="text-[#8E8E93] leading-relaxed">
-              If you have any questions about these Terms, please contact us at support@summitapp.com.
+              If you have any questions about these Terms, please contact us at summitapp.support@gmail.com.
             </p>
           </section>
         </div>

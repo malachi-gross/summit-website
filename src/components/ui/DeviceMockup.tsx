@@ -2,17 +2,39 @@
 
 import Image from 'next/image';
 import { cn } from '@/lib/cn';
-import { motion, type Transition } from 'framer-motion';
-import { ReactNode } from 'react';
+import { motion, AnimatePresence, type Transition } from 'framer-motion';
+import { ReactNode, useState, useEffect } from 'react';
 
 interface DeviceMockupProps {
   children?: ReactNode;
   className?: string;
   floating?: boolean;
   screenshotSrc?: string;
+  screenshots?: string[];
+  carouselInterval?: number;
 }
 
-export function DeviceMockup({ children, className, floating = true, screenshotSrc }: DeviceMockupProps) {
+export function DeviceMockup({
+  children,
+  className,
+  floating = true,
+  screenshotSrc,
+  screenshots,
+  carouselInterval = 4000,
+}: DeviceMockupProps) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const imageSources = screenshots || (screenshotSrc ? [screenshotSrc] : []);
+
+  useEffect(() => {
+    if (imageSources.length <= 1) return;
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % imageSources.length);
+    }, carouselInterval);
+
+    return () => clearInterval(interval);
+  }, [imageSources.length, carouselInterval]);
+
   const floatingTransition: Transition = {
     duration: 4,
     repeat: Infinity,
@@ -36,14 +58,25 @@ export function DeviceMockup({ children, className, floating = true, screenshotS
 
             {/* Screen content */}
             <div className="w-full h-full">
-              {children ? children : screenshotSrc ? (
+              {children ? children : imageSources.length > 0 ? (
                 <div className="relative w-full h-full">
-                  <Image
-                    src={screenshotSrc}
-                    alt="Summit app screenshot"
-                    fill
-                    className="object-cover object-top"
-                  />
+                  <AnimatePresence mode="wait">
+                    <motion.div
+                      key={currentIndex}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.5 }}
+                      className="absolute inset-0"
+                    >
+                      <Image
+                        src={imageSources[currentIndex]}
+                        alt="Summit app screenshot"
+                        fill
+                        className="object-cover object-top"
+                      />
+                    </motion.div>
+                  </AnimatePresence>
                 </div>
               ) : (
                 <div className="pt-12 pb-6 px-2 h-full">
@@ -63,6 +96,25 @@ export function DeviceMockup({ children, className, floating = true, screenshotS
         <div className="absolute left-[-2px] top-[220px] w-[3px] h-[50px] bg-[#2C2C2E] rounded-l-sm" />
         <div className="absolute right-[-2px] top-[150px] w-[3px] h-[80px] bg-[#2C2C2E] rounded-r-sm" />
       </div>
+
+      {/* Carousel indicators */}
+      {imageSources.length > 1 && (
+        <div className="flex justify-center gap-2 mt-4">
+          {imageSources.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={cn(
+                'w-2 h-2 rounded-full transition-all duration-300',
+                index === currentIndex
+                  ? 'bg-[#00D47B] w-6'
+                  : 'bg-[#3A3A3C] hover:bg-[#4A4A4C]'
+              )}
+              aria-label={`Go to screenshot ${index + 1}`}
+            />
+          ))}
+        </div>
+      )}
     </motion.div>
   );
 }

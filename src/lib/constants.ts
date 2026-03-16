@@ -62,24 +62,24 @@ export const HISTORY_STATS = {
   description: 'See your progress unfold over time. Summit\'s history view gives you a complete picture of your habit journey with powerful visualizations.',
   stats: [
     {
-      icon: 'Calendar',
-      title: 'Activity Heatmap',
-      description: 'Visualize your consistency with a color-coded calendar',
+      icon: 'Link',
+      title: 'Habit Connections',
+      description: 'Discover which habits you complete together and build powerful routines',
     },
     {
       icon: 'ChartBar',
-      title: 'Average Score',
-      description: 'Track your daily score trends over weeks and months',
+      title: 'Daily Performance',
+      description: 'See your strongest and weakest days to optimize your schedule',
     },
     {
-      icon: 'CheckCircle',
-      title: 'Total Habits',
-      description: 'See the cumulative count of habits you\'ve completed',
+      icon: 'TrendingUp',
+      title: 'Weekly Trends',
+      description: 'Track how your completion rate changes week over week',
     },
     {
       icon: 'Star',
-      title: 'Perfect Days',
-      description: 'Celebrate days where you hit 100% of your habits',
+      title: 'Most Consistent',
+      description: 'Rank your habits by completion rate and celebrate your wins',
     },
   ],
 } as const;
@@ -185,7 +185,6 @@ export const FAQ = [
 export const NAV_LINKS = [
   { label: 'Features', href: '#features' },
   { label: 'How It Works', href: '#how-it-works' },
-  { label: 'History', href: '#history' },
   { label: 'Pricing', href: '#pricing' },
   { label: 'FAQ', href: '#faq' },
 ] as const;

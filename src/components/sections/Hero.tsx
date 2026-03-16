@@ -4,15 +4,15 @@ import { Container } from '@/components/ui/Container';
 import { Button } from '@/components/ui/Button';
 import { DeviceMockup } from '@/components/ui/DeviceMockup';
 import { FadeIn } from '@/components/animations/FadeIn';
-import { APP_TAGLINE, APP_DESCRIPTION, APP_STORE_URL } from '@/lib/constants';
+import { APP_DESCRIPTION, APP_STORE_URL } from '@/lib/constants';
 
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center pt-20 pb-16 overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#00D47B]/5 via-transparent to-transparent" />
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#00D47B]/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#007AFF]/10 rounded-full blur-3xl" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#FF3B30]/5 via-transparent to-[#00D47B]/5" />
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#FF3B30]/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#00D47B]/10 rounded-full blur-3xl" />
 
       <Container className="relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
@@ -20,15 +20,9 @@ export function Hero() {
           <div className="text-center lg:text-left">
             <FadeIn delay={0.1}>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-                {APP_TAGLINE.split(' ').map((word, i) => (
-                  <span key={i}>
-                    {word === 'higher' ? (
-                      <span className="text-[#00D47B]">{word}</span>
-                    ) : (
-                      word
-                    )}{' '}
-                  </span>
-                ))}
+                Start in <span className="text-[#FF3B30]">debt</span>.{' '}
+                <br className="hidden sm:block" />
+                Climb to <span className="text-[#00D47B]">victory</span>.
               </h1>
             </FadeIn>
 
@@ -73,9 +67,19 @@ export function Hero() {
             </FadeIn>
           </div>
 
-          {/* Device Mockup */}
+          {/* Overlapping Device Mockups */}
           <FadeIn delay={0.3} direction="right" className="flex justify-center lg:justify-end">
-            <DeviceMockup floating screenshotSrc="/images/app-screenshot.png" />
+            <div className="relative w-[320px] h-[580px] sm:w-[380px] sm:h-[680px]">
+              {/* Debt phone - behind, offset left and up */}
+              <div className="absolute left-0 top-0 scale-[0.75] origin-top-left opacity-60 -rotate-6">
+                <DeviceMockup screenshotSrc="/images/screenshot-debt.png" />
+              </div>
+
+              {/* Goal phone - in front, primary focus */}
+              <div className="absolute right-0 bottom-0 scale-[0.85] origin-bottom-right rotate-3">
+                <DeviceMockup floating screenshotSrc="/images/app-screenshot.png" />
+              </div>
+            </div>
           </FadeIn>
         </div>
       </Container>

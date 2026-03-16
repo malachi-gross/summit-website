@@ -13,12 +13,12 @@ export function Features() {
       <Container>
         <FadeIn className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Everything you need to{' '}
-            <span className="text-[#00D47B]">build habits</span>
+            Built for the{' '}
+            <span className="text-[#00D47B]">climb</span>
           </h2>
           <p className="text-lg text-[#8E8E93] max-w-2xl mx-auto">
-            Summit gives you the tools to create lasting routines with a beautiful,
-            intuitive interface designed for daily use.
+            Summit&apos;s unique approach turns habit tracking into a daily achievement.
+            Start in debt, complete your habits, and reach your summit.
           </p>
         </FadeIn>
 

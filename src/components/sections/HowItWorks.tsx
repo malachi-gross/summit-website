@@ -13,7 +13,7 @@ export function HowItWorks() {
             How it <span className="text-[#00D47B]">works</span>
           </h2>
           <p className="text-lg text-[#8E8E93] max-w-2xl mx-auto">
-            Getting started with Summit is simple. Build better habits in three easy steps.
+            Every day is a journey from debt to victory. Here&apos;s how Summit transforms your habits.
           </p>
         </FadeIn>
 
@@ -21,14 +21,23 @@ export function HowItWorks() {
           {HOW_IT_WORKS.map((item, index) => (
             <FadeIn key={item.step} delay={index * 0.15}>
               <div className="relative">
-                {/* Connector line */}
+                {/* Connector line with gradient */}
                 {index < HOW_IT_WORKS.length - 1 && (
-                  <div className="hidden md:block absolute top-8 left-[calc(50%+40px)] w-[calc(100%-80px)] h-[2px] bg-gradient-to-r from-[#00D47B]/50 to-[#00D47B]/10" />
+                  <div
+                    className="hidden md:block absolute top-8 left-[calc(50%+40px)] w-[calc(100%-80px)] h-[2px]"
+                    style={{
+                      background: `linear-gradient(to right, ${item.color}, ${HOW_IT_WORKS[index + 1].color})`,
+                      opacity: 0.6,
+                    }}
+                  />
                 )}
 
                 <div className="text-center">
-                  {/* Step number */}
-                  <div className="w-16 h-16 rounded-full bg-[#00D47B] text-black text-2xl font-bold flex items-center justify-center mx-auto mb-6">
+                  {/* Step number with dynamic color */}
+                  <div
+                    className="w-16 h-16 rounded-full text-white text-2xl font-bold flex items-center justify-center mx-auto mb-6"
+                    style={{ backgroundColor: item.color }}
+                  >
                     {item.step}
                   </div>
 

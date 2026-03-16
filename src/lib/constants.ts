@@ -1,58 +1,88 @@
 export const APP_NAME = 'Summit';
-export const APP_TAGLINE = 'Climb higher every day.';
-export const APP_DESCRIPTION = 'The habit tracking app that helps you build lasting routines through streaks, insights, and beautiful design.';
+export const APP_TAGLINE = 'Start in debt. Climb to victory.';
+export const APP_DESCRIPTION = 'The habit tracker that flips the script. Wake up in the red, complete your habits, and watch your score transform from negative to positive. Every day is a climb to your summit.';
 export const APP_STORE_URL = 'https://apps.apple.com/us/app/summit-habit-tracker/id6751303035';
 
 export const FEATURES = [
   {
-    icon: 'CheckCircle',
-    title: 'Simple Habit Tracking',
-    description: 'Track your daily habits with a single tap. No complex setup, just start building better routines.',
+    icon: 'TrendingUp',
+    title: 'Start in Debt',
+    description: 'Begin each day with negative points. Your habits aren\'t just tasks—they\'re your ladder out of the red.',
   },
   {
-    icon: 'Flame',
-    title: 'Streak Motivation',
-    description: 'Watch your streaks grow and stay motivated. Visual progress keeps you accountable day after day.',
+    icon: 'Target',
+    title: 'Reach Your Summit',
+    description: 'Watch your score transform from red to green as you complete habits. Hit your daily goal and claim victory.',
+  },
+  {
+    icon: 'PlusMinus',
+    title: 'Dual Habit System',
+    description: 'Track positive habits that add points and negative habits that subtract. Build good routines while breaking bad ones.',
   },
   {
     icon: 'ChartBar',
     title: 'Powerful Insights',
-    description: 'Understand your patterns with detailed analytics. See your progress over weeks, months, and years.',
-  },
-  {
-    icon: 'Bell',
-    title: 'Smart Reminders',
-    description: 'Never miss a habit with customizable notifications. Set the perfect time for each routine.',
+    description: 'View heatmaps, track scores over time, and celebrate perfect days. See your progress at a glance.',
   },
   {
     icon: 'Users',
     title: 'Partner Accountability',
-    description: 'Connect with a partner to share progress and stay accountable together.',
+    description: 'Climb together with a partner. Share progress and keep each other motivated on the journey.',
   },
   {
-    icon: 'Sparkles',
-    title: 'Beautiful Design',
-    description: 'A stunning dark interface that feels native to iOS. Track habits in style.',
+    icon: 'Bell',
+    title: 'Smart Reminders',
+    description: 'Get nudged when you\'re still in debt. Timely notifications help you reach your summit before the day ends.',
   },
 ] as const;
 
 export const HOW_IT_WORKS = [
   {
     step: 1,
-    title: 'Add Your Habits',
-    description: 'Create habits that matter to you. Set daily, weekly, or custom schedules.',
+    title: 'Start in Debt',
+    description: 'Wake up with negative points. Your daily habits determine how deep you start—the more habits, the bigger the climb.',
+    color: '#FF3B30',
   },
   {
     step: 2,
-    title: 'Track Daily',
-    description: 'Check off habits as you complete them. Build momentum with every tap.',
+    title: 'Complete Habits',
+    description: 'Check off habits throughout the day. Each completion adds points and moves you closer to zero and beyond.',
+    color: '#FF9500',
   },
   {
     step: 3,
-    title: 'Watch Progress',
-    description: 'See your streaks grow and insights improve. Celebrate your consistency.',
+    title: 'Reach Your Summit',
+    description: 'Cross into positive territory and hit your goal. Green means victory—you\'ve conquered the day.',
+    color: '#00D47B',
   },
 ] as const;
+
+export const HISTORY_STATS = {
+  title: 'Track Your Journey',
+  description: 'See your progress unfold over time. Summit\'s history view gives you a complete picture of your habit journey with powerful visualizations.',
+  stats: [
+    {
+      icon: 'Calendar',
+      title: 'Activity Heatmap',
+      description: 'Visualize your consistency with a color-coded calendar',
+    },
+    {
+      icon: 'ChartBar',
+      title: 'Average Score',
+      description: 'Track your daily score trends over weeks and months',
+    },
+    {
+      icon: 'CheckCircle',
+      title: 'Total Habits',
+      description: 'See the cumulative count of habits you\'ve completed',
+    },
+    {
+      icon: 'Star',
+      title: 'Perfect Days',
+      description: 'Celebrate days where you hit 100% of your habits',
+    },
+  ],
+} as const;
 
 export const TESTIMONIALS = [
   {
@@ -119,34 +149,43 @@ export const PRICING = {
 
 export const FAQ = [
   {
+    question: 'What does starting in debt mean?',
+    answer: 'Each day, you begin with negative points based on your habits. For example, if you have 5 habits worth 2 points each, you start at -10. As you complete habits, your score rises toward zero and beyond to your goal. It\'s a psychological shift—instead of building from nothing, you\'re climbing out of a hole.',
+  },
+  {
+    question: 'How does the points system work?',
+    answer: 'Each habit has a point value you assign (1-5 points). Positive habits add points when completed, while negative habits (like "no social media") subtract points if you break them. Your daily goal is to reach a positive score, turning your display from red to green.',
+  },
+  {
+    question: 'What are positive vs negative habits?',
+    answer: 'Positive habits are things you want to do (exercise, read, meditate) and earn you points. Negative habits are things you want to avoid (smoking, junk food, excessive screen time)—you start with those points, but lose them if you slip up. Both types help you build the life you want.',
+  },
+  {
+    question: 'What makes Summit different from other habit apps?',
+    answer: 'Summit\'s debt-to-goal system creates urgency and satisfaction that other apps lack. Instead of passive checkboxes, you\'re actively climbing out of the red each day. The visual transformation from negative (red) to positive (green) provides instant, motivating feedback on your progress.',
+  },
+  {
     question: 'Is Summit really free to use?',
-    answer: 'Yes! Summit is free to download and use with up to 3 habits. You can track streaks, set reminders, and view basic insights without paying anything.',
+    answer: 'Yes! Summit is free to download and use with up to 3 habits. You can track your debt-to-goal progress, set reminders, and view basic insights without paying anything.',
   },
   {
     question: 'What devices does Summit support?',
-    answer: 'Summit is currently available on iOS (iPhone and iPad). Android support is coming soon - join our waitlist to be notified!',
+    answer: 'Summit is currently available on iOS (iPhone and iPad). Android support is coming soon—join our waitlist to be notified!',
   },
   {
     question: 'How does partner accountability work?',
-    answer: 'With Summit Pro, you can invite a partner to share habit progress. You\'ll see when they complete habits and receive notifications to keep each other accountable.',
+    answer: 'With Summit Pro, you can invite a partner to share habit progress. You\'ll see when they complete habits and receive notifications to keep each other accountable on your climb.',
   },
   {
     question: 'Can I cancel my subscription anytime?',
     answer: 'Absolutely. You can cancel your subscription at any time through the App Store. Your Pro features will remain active until the end of your billing period.',
-  },
-  {
-    question: 'Is my data private and secure?',
-    answer: 'Your privacy is our priority. Habit data is stored securely and never shared with third parties. You can delete your data at any time from within the app.',
-  },
-  {
-    question: 'What makes Summit different from other habit apps?',
-    answer: 'Summit focuses on simplicity and motivation. Our beautiful dark interface, streak visualization, and partner accountability features create a unique experience that keeps you coming back.',
   },
 ] as const;
 
 export const NAV_LINKS = [
   { label: 'Features', href: '#features' },
   { label: 'How It Works', href: '#how-it-works' },
+  { label: 'History', href: '#history' },
   { label: 'Pricing', href: '#pricing' },
   { label: 'FAQ', href: '#faq' },
 ] as const;

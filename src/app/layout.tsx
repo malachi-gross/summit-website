@@ -15,6 +15,10 @@ export const metadata: Metadata = {
   description: "The habit tracking app that helps you build lasting routines through streaks, insights, and beautiful design.",
   keywords: ["habit tracker", "habits", "streaks", "iOS app", "productivity", "routine", "self-improvement"],
   authors: [{ name: "Summit" }],
+  icons: {
+    icon: "/images/summit-logo.png",
+    apple: "/images/summit-logo.png",
+  },
   openGraph: {
     title: "Summit - Climb higher every day",
     description: "The habit tracking app that helps you build lasting routines through streaks, insights, and beautiful design.",

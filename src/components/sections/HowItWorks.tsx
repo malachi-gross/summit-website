@@ -24,7 +24,7 @@ export function HowItWorks() {
                 {/* Connector line with gradient */}
                 {index < HOW_IT_WORKS.length - 1 && (
                   <div
-                    className="hidden md:block absolute top-8 left-[calc(50%+40px)] w-[calc(100%-80px)] h-[2px]"
+                    className="hidden md:block absolute top-8 left-[calc(50%+32px)] w-[calc(100%+48px-64px)] h-[2px]"
                     style={{
                       background: `linear-gradient(to right, ${item.color}, ${HOW_IT_WORKS[index + 1].color})`,
                       opacity: 0.6,

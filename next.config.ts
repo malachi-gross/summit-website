@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: 'export',
-  // basePath: '/summit-website',  // Uncomment for GitHub Pages deployment
+  basePath: '/summit-website',
   images: { unoptimized: true },
   trailingSlash: true,
 };

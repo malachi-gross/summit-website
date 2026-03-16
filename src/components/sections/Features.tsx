@@ -45,9 +45,9 @@ export function Features() {
             <DeviceMockup
               floating={false}
               screenshots={[
-                '/images/screenshot-history.png',
-                '/images/screenshot-insights-1.png',
-                '/images/screenshot-insights-2.png',
+                '/summit-website/images/screenshot-history.png',
+                '/summit-website/images/screenshot-insights-1.png',
+                '/summit-website/images/screenshot-insights-2.png',
               ]}
               carouselInterval={5500}
             />

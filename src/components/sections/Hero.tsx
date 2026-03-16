@@ -72,12 +72,12 @@ export function Hero() {
             <div className="relative w-[320px] h-[580px] sm:w-[380px] sm:h-[680px]">
               {/* Debt phone - behind, offset left and up */}
               <div className="absolute left-0 top-0 scale-[0.75] origin-top-left opacity-60 -rotate-6">
-                <DeviceMockup screenshotSrc="/images/screenshot-debt.png" />
+                <DeviceMockup screenshotSrc="/summit-website/images/screenshot-debt.png" />
               </div>
 
               {/* Goal phone - in front, primary focus */}
               <div className="absolute right-0 bottom-0 scale-[0.85] origin-bottom-right rotate-3">
-                <DeviceMockup floating screenshotSrc="/images/app-screenshot.png" />
+                <DeviceMockup floating screenshotSrc="/summit-website/images/app-screenshot.png" />
               </div>
             </div>
           </FadeIn>

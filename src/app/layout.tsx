@@ -16,8 +16,8 @@ export const metadata: Metadata = {
   keywords: ["habit tracker", "habits", "streaks", "iOS app", "productivity", "routine", "self-improvement"],
   authors: [{ name: "Summit" }],
   icons: {
-    icon: "/images/summit-logo.png",
-    apple: "/images/summit-logo.png",
+    icon: "/summit-website/images/summit-logo.png",
+    apple: "/summit-website/images/summit-logo.png",
   },
   openGraph: {
     title: "Summit - Climb higher every day",

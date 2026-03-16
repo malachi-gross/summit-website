@@ -16,7 +16,7 @@ export function Footer() {
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
               <Image
-                src="/images/summit-logo.png"
+                src="/summit-website/images/summit-logo.png"
                 alt="Summit"
                 width={32}
                 height={32}

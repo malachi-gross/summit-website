@@ -7,7 +7,7 @@ export const FEATURES = [
   {
     icon: 'TrendingUp',
     title: 'Start in Debt',
-    description: 'Begin each day with negative points. Your habits aren\'t just tasks—they\'re your ladder out of the red.',
+    description: 'Begin each day with negative points based on your difficulty preset: Easy (-10), Medium (-20), Hard (-30), or Custom.',
   },
   {
     icon: 'Target',
@@ -16,8 +16,8 @@ export const FEATURES = [
   },
   {
     icon: 'PlusMinus',
-    title: 'Dual Habit System',
-    description: 'Track positive habits that add points and negative habits that subtract. Build good routines while breaking bad ones.',
+    title: 'Positive & Negative Habits',
+    description: 'Track positive habits that earn points when completed. With Pro, track negative habits too—slip up and lose points.',
   },
   {
     icon: 'ChartBar',
@@ -30,9 +30,9 @@ export const FEATURES = [
     description: 'Climb together with a partner. Share progress and keep each other motivated on the journey.',
   },
   {
-    icon: 'Bell',
-    title: 'Smart Reminders',
-    description: 'Get nudged when you\'re still in debt. Timely notifications help you reach your summit before the day ends.',
+    icon: 'Layers',
+    title: '40+ Habit Templates',
+    description: 'Choose from expertly-crafted templates across 8 categories: Health, Fitness, Productivity, Learning, Mindfulness, Social, Creative, and Finance.',
   },
 ] as const;
 
@@ -84,23 +84,6 @@ export const HISTORY_STATS = {
   ],
 } as const;
 
-export const TESTIMONIALS = [
-  {
-    quote: "Summit has completely transformed my morning routine. The streak feature keeps me coming back every single day.",
-    author: "Sarah M.",
-    role: "Fitness Enthusiast",
-  },
-  {
-    quote: "Finally, a habit app that doesn't feel cluttered. Clean, simple, and effective. Exactly what I needed.",
-    author: "James K.",
-    role: "Software Developer",
-  },
-  {
-    quote: "The partner accountability feature is a game-changer. My wife and I keep each other on track daily.",
-    author: "Michael R.",
-    role: "Entrepreneur",
-  },
-] as const;
 
 export const PRICING = {
   free: {
@@ -109,10 +92,14 @@ export const PRICING = {
     period: 'forever',
     description: 'Perfect for getting started',
     features: [
-      'Up to 3 habits',
-      'Basic streak tracking',
-      'Daily reminders',
-      'Weekly insights',
+      'Up to 5 habits',
+      'Positive habit tracking',
+      'Streak tracking',
+      'Daily & weekly analytics',
+      'Home screen widgets',
+      'Difficulty presets',
+      '10 habit templates',
+      '4 weeks history',
     ],
     cta: 'Get Started',
     highlighted: false,
@@ -136,12 +123,13 @@ export const PRICING = {
     description: 'For those serious about growth',
     features: [
       'Unlimited habits',
-      'Advanced analytics',
-      'Partner accountability',
-      'Custom habit icons',
-      'Widget support',
-      'Priority support',
-      'All future features',
+      'Negative habit tracking',
+      'Monthly & yearly analytics',
+      'Score heatmaps',
+      'Advanced insights & trends',
+      '40+ habit templates',
+      'Complete history access',
+      'Accountability partner',
     ],
     cta: 'Upgrade to Pro',
     highlighted: true,
@@ -167,11 +155,11 @@ export const FAQ = [
   },
   {
     question: 'Is Summit really free to use?',
-    answer: 'Yes! Summit is free to download and use with up to 3 habits. You can track your debt-to-goal progress, set reminders, and view basic insights without paying anything.',
+    answer: 'Yes! Summit is free to download and use with up to 5 habits. You get streak tracking, daily and weekly analytics, home screen widgets, difficulty presets, 10 habit templates, and 4 weeks of history—all without paying anything.',
   },
   {
     question: 'What devices does Summit support?',
-    answer: 'Summit is currently available on iOS (iPhone and iPad). Android support is coming soon—join our waitlist to be notified!',
+    answer: 'Summit is currently available on iOS (iPhone and iPad). We\'re building support for Android, Web, macOS, Windows, and Linux—your habits will sync seamlessly across all your devices when they launch.',
   },
   {
     question: 'How does partner accountability work?',
@@ -184,17 +172,17 @@ export const FAQ = [
 ] as const;
 
 export const NAV_LINKS = [
-  { label: 'Features', href: '#features' },
-  { label: 'How It Works', href: '#how-it-works' },
-  { label: 'Pricing', href: '#pricing' },
-  { label: 'FAQ', href: '#faq' },
+  { label: 'Features', href: '/#features' },
+  { label: 'How It Works', href: '/#how-it-works' },
+  { label: 'Pricing', href: '/#pricing' },
+  { label: 'FAQ', href: '/#faq' },
 ] as const;
 
 export const FOOTER_LINKS = {
   product: [
-    { label: 'Features', href: '#features' },
-    { label: 'Pricing', href: '#pricing' },
-    { label: 'FAQ', href: '#faq' },
+    { label: 'Features', href: '/#features' },
+    { label: 'Pricing', href: '/#pricing' },
+    { label: 'FAQ', href: '/#faq' },
   ],
   legal: [
     { label: 'Privacy Policy', href: '/privacy' },

@@ -138,10 +138,6 @@ export const PRICING = {
 
 export const FAQ = [
   {
-    question: 'What does starting in debt mean?',
-    answer: 'Each day, you begin with negative points based on your habits. For example, if you have 5 habits worth 2 points each, you start at -10. As you complete habits, your score rises toward zero and beyond to your goal. It\'s a psychological shift—instead of building from nothing, you\'re climbing out of a hole.',
-  },
-  {
     question: 'How does the points system work?',
     answer: 'Each habit has a point value you assign (1-5 points). Positive habits add points when completed, while negative habits (like "no social media") subtract points if you break them. Your daily goal is to reach a positive score, turning your display from red to green.',
   },

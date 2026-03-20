@@ -172,17 +172,17 @@ export const FAQ = [
 ] as const;
 
 export const NAV_LINKS = [
-  { label: 'Features', href: '/#features' },
-  { label: 'How It Works', href: '/#how-it-works' },
-  { label: 'Pricing', href: '/#pricing' },
-  { label: 'FAQ', href: '/#faq' },
+  { label: 'Features', href: '/summit-website/#features' },
+  { label: 'How It Works', href: '/summit-website/#how-it-works' },
+  { label: 'Pricing', href: '/summit-website/#pricing' },
+  { label: 'FAQ', href: '/summit-website/#faq' },
 ] as const;
 
 export const FOOTER_LINKS = {
   product: [
-    { label: 'Features', href: '/#features' },
-    { label: 'Pricing', href: '/#pricing' },
-    { label: 'FAQ', href: '/#faq' },
+    { label: 'Features', href: '/summit-website/#features' },
+    { label: 'Pricing', href: '/summit-website/#pricing' },
+    { label: 'FAQ', href: '/summit-website/#faq' },
   ],
   legal: [
     { label: 'Privacy Policy', href: '/privacy' },
